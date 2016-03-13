@@ -31,7 +31,7 @@ cacheSolve <- function(x, ...) {
                 message("Getting cached matrix inverse")
                 return(inverse) #returns cached inverse
         }
-        data<-x$get() #passes new matrix to cache
+        data<-x$get() #get new matrix 
         inverse <- solve(data) #find matrix inverse
         x$setinverse(inverse) #set matrix inverse to cache
         inverse #return inverse
